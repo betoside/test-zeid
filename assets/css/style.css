@@ -371,6 +371,7 @@ header .container {
     padding: 40px 25px;
     min-height: 310px;
     line-height: 150%;
+    /* font-weight: 500; */
 }
 
 .fale { margin-bottom: 140px; }

@@ -44,7 +44,6 @@
             }
         ];
 
-
         const c = (el)=>document.querySelector(el);
         const cs = (el)=>document.querySelectorAll(el);
 
@@ -67,26 +66,19 @@
                 if (conteudoSite[i].idioma === idiomaAtual) {
                     for (let j in conteudoSite[i].idiomas) {
                         if (conteudoSite[i].idiomas[j] === idiomaAtual) {
-                            htmlMenu += `<li id="${conteudoSite[i].idiomas[j]}" class="on" onclick="montarTela('${conteudoSite[i].idiomas[j]}',this);">${conteudoSite[i].conteudo[j]}</li>`;
+                            htmlMenu += `<li id="${conteudoSite[i].idiomas[j]}" class="on" onclick="montarTela('${conteudoSite[i].idiomas[j]}');">${conteudoSite[i].conteudo[j]}</li>`;
                         } else {
-                            htmlMenu += `<li id="${conteudoSite[i].idiomas[j]}" class="" onclick="montarTela('${conteudoSite[i].idiomas[j]}',this);">${conteudoSite[i].conteudo[j]}</li>`;
+                            htmlMenu += `<li id="${conteudoSite[i].idiomas[j]}" class="" onclick="montarTela('${conteudoSite[i].idiomas[j]}');">${conteudoSite[i].conteudo[j]}</li>`;
                         }
-                        
                     }
-                    htmlImg = `<img src="assets/images/${conteudoSite[i].img}" alt="${conteudoSite[i].pais}">`;
+                    htmlImg = `<img src="assets/images/${conteudoSite[i].img}" title="${conteudoSite[i].pais}">`;
                 }
             }
+
             listaIdiomas.innerHTML = htmlMenu;
             imgPrincipal.innerHTML = htmlImg;
         }
         montarTela();
-        
-        // menuItem = c('.lista-idioma li a')
-        // menuItem.addEventListener('click', (e)=>{
-        //     console.log('this');
-        //     e.preventDefault();
-        // });
-
         
     </script>
     
