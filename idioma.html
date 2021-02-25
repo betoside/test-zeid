@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste idioma</title>
+    <style>
+        * { font-family: sans-serif; font-size: 110%;}
+        img { max-width: 100%; }
+        .containerImg { max-width: 450px; margin: 20px; padding: 10px; }
+        .lista-idioma li { display: block; list-style: none; text-decoration: none; width: 200px; border-left: 5px solid #fff; padding-left: 10px; text-transform: capitalize; }
+        .lista-idioma li:hover { border-left: 5px solid #000; }
+        .lista-idioma li.on { border-left: 5px solid #f00; }
+    </style>
+</head>
+<body>
+
+    <ul class="lista-idioma"></ul>
+    <div class="containerImg"></div>
+
+    <script>
+        let conteudoSite = [
+            {
+                idioma: 'pt',
+                idiomas: ['pt', 'us', 'fr'],
+                conteudo: ['português', 'inglês', 'francês'],
+                img: 'brasil.jpg',
+                pais: 'brasil'
+            },
+            {
+                idioma: 'us',
+                idiomas: ['pt', 'us', 'fr'],
+                conteudo: ['portuguese', 'english', 'franch'],
+                img: 'usa.jpg',
+                pais: 'usa'
+            },
+            {
+                idioma: 'fr',
+                idiomas: ['pt', 'us', 'fr'],
+                conteudo: ['Portugais', 'Anglais', 'français'],
+                img: 'france.jpg',
+                pais: 'france'
+            }
+        ];
+
+
+        const c = (el)=>document.querySelector(el);
+        const cs = (el)=>document.querySelectorAll(el);
+
+        let idiomaAtual = "";
+        let listaIdiomas = c('.lista-idioma');
+        let imgPrincipal = c('.containerImg');
+
+        function montarTela (idioma) {
+
+            if (idioma === undefined) {
+                idiomaAtual = "pt";
+            } else {
+                idiomaAtual = idioma;
+            }
+
+            let htmlMenu = '';
+            let htmlImg = '';
+
+            for (i=0;i<conteudoSite.length;i++){
+                if (conteudoSite[i].idioma === idiomaAtual) {
+                    for (let j in conteudoSite[i].idiomas) {
+                        if (conteudoSite[i].idiomas[j] === idiomaAtual) {
+                            htmlMenu += `<li id="${conteudoSite[i].idiomas[j]}" class="on" onclick="montarTela('${conteudoSite[i].idiomas[j]}',this);">${conteudoSite[i].conteudo[j]}</li>`;
+                        } else {
+                            htmlMenu += `<li id="${conteudoSite[i].idiomas[j]}" class="" onclick="montarTela('${conteudoSite[i].idiomas[j]}',this);">${conteudoSite[i].conteudo[j]}</li>`;
+                        }
+                        
+                    }
+                    htmlImg = `<img src="assets/images/${conteudoSite[i].img}" alt="${conteudoSite[i].pais}">`;
+                }
+            }
+            listaIdiomas.innerHTML = htmlMenu;
+            imgPrincipal.innerHTML = htmlImg;
+        }
+        montarTela();
+        
+        // menuItem = c('.lista-idioma li a')
+        // menuItem.addEventListener('click', (e)=>{
+        //     console.log('this');
+        //     e.preventDefault();
+        // });
+
+        
+    </script>
+    
+</body>
+</html>
