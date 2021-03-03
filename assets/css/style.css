@@ -131,6 +131,23 @@ header .container {
     position: absolute;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.moldura ul {
+    padding-right: 30px;
+}
+.moldura ul,
+.moldura ul li {
+    list-style: none;
+}
+.moldura ul li {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.moldura li img {
+    width: 40px;
 }
 
 
@@ -423,7 +440,8 @@ header .container {
 }
 .bt-enviar {
     font-size: 19px;
-    color: #1d1d1b;
+    /* color: #1d1d1b; */
+    color: #003c5c;
     text-transform: uppercase;
     border: 2px solid #fff;
     padding: 15px 15px 13px 15px;
