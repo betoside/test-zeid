@@ -28,7 +28,8 @@ if ($pagina == "index-fr.html") {
     $homepage = "aller sur le site >";
 }
 
-$to      = 'betoside@gmail.com';
+$to      = 'cz@zeidlercapital.com';
+// $to      = 'contact@zeidlercapital.com';
 $subject = 'Contato Form Zeidler Capital';
 
 $message = '
@@ -62,11 +63,11 @@ $message = '
 
     // echo $message;
 
-// $headers = 'From: '. $email . "\r\n" .
-//     'Reply-To: '. $email . "\r\n" .
-//     'X-Mailer: PHP/' . phpversion();
+$headers = 'From: '. $email . "\r\n" .
+    'Reply-To: '. $email . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-// mail($to, $subject, $message, $headers);
+mail($to, $subject, $message, $headers);
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +108,7 @@ $message = '
                     </a>
 
                     <p>
-                        <?php echo $message;?>
+                        <?php // echo $message;?>
                     </p>
                 </div>
                 <div class="capital-ilustracao">
