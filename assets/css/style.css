@@ -150,6 +150,10 @@ header .container {
     width: 40px;
 }
 
+.ico-idioma {
+    width: 35px;
+}
+
 
 .tit-secao {
     padding-bottom: 30px;
@@ -280,7 +284,8 @@ header .container {
     padding-bottom: 65px;
 }
 .passos .tit-secao { 
-    margin-bottom: 0;
+    margin: 100px 0 60px;
+    /* margin-bottom: 0; */
 }
 
 .barra { 
@@ -389,6 +394,10 @@ header .container {
     min-height: 310px;
     line-height: 150%;
     /* font-weight: 500; */
+}
+
+.imobiliario {
+    margin-bottom: 70px;
 }
 
 .fale { margin-bottom: 140px; }
