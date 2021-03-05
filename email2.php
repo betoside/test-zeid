@@ -6,7 +6,7 @@
 require_once('./vendor/autoload.php');
 use Postmark\PostmarkClient;
 
-$client = new PostmarkClient("ce74bb7b-41ba-4f87-8607-a03e46d55947");
+$client = new PostmarkClient("NONONONONONONONO");
 $fromEmail = "contact@zeidlercapital.com";
 $toEmail = "betoside@gmail.com";
 $subject = "Hello from Postmark";
