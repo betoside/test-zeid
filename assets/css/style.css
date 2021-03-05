@@ -257,7 +257,7 @@ header .container {
 /* .gestao-body {  } */
 .gestao-body-linha { display: flex; }
 .gestao-body-linha .col-1a { flex: 1; }
-.gestao-body-linha .col-2a { flex: 1; padding-left: 70px; }
+.gestao-body-linha .col-2a { flex: 1; padding-top: 40px; padding-left: 70px; }
 .gestao-body-linha .col-1b { flex: 1; }
 .gestao-body-linha .col-2b { flex: 1; padding-left: 70px; }
 /* .gestao-body-linha .col-1b {} */
