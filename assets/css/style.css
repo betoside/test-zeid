@@ -590,6 +590,9 @@ Bold 700
     .nav-main li a {
         font-size: 11px;
     }
+    .ico-idioma {
+        width: 25px;
+    }
     .cap2 .capital-body .texto {
         padding-right: 40px;
     }
@@ -821,9 +824,6 @@ Bold 700
 
     .logo a {
         width: 90px;
-    }
-    .social li a {
-        width: 22px;
     }
     .menu-mobile {
         width: 27px;
