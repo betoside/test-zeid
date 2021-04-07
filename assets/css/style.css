@@ -25,7 +25,9 @@ Bold 700
          url('fonts/KionaRegular.ttf') format('truetype'),
          url('fonts/KionaRegular.svg#KionaRegular') format('svg');
 }
-
+.inside {
+    list-style-position: inside;
+}
 .db {
     display: block;
 }
@@ -54,6 +56,38 @@ p {
     margin: 25px 0; line-height: 140%; 
 }
 
+.botao-topo {
+    background-color: #043c5b;
+    font-weight: bold;
+    font-size: 20px;
+    color: #f8b032;
+    position: fixed;
+    right: 0;
+    top: 74vh;
+    width: 0;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x:hidden;
+    cursor: pointer;
+    z-index: 1;
+
+    transition:all ease .2s;
+
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
 header { 
     height: 123px; background-color: #043c5b; 
 }
@@ -271,6 +305,12 @@ header .container {
     font-size: 30px;
     margin-bottom: 20px;
 }
+
+.gestao-body .subtit-solucoes { 
+    text-align: left; 
+    margin-top: 0;
+}
+
 .gestao-body p { margin-bottom: 40px; }
 
 .gestao-body-linha-pontilhada {

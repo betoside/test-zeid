@@ -12,7 +12,7 @@ $msg = '<br>'. nl2br($_POST['msg'], false);
 $pagina = $_POST['pagina'];
 
 
-if ($pagina == "index.html") {
+if ($pagina == "index-br.html") {
     $tituloAgradecimento = "MUITO OBRIGADO";
     $resposta = "Ok, sua mensagem foi enviada.";
     $homepage = "ir para o site >";
@@ -22,7 +22,7 @@ if ($pagina == "index-en.html") {
     $resposta = "Okay, your message has been sent.";
     $homepage = "go to website >";
 }
-if ($pagina == "index-fr.html") {
+if ($pagina == "index.html") {
     $tituloAgradecimento = "MERCI BEAUCOUP";
     $resposta = "Ok, votre message a été envoyé.";
     $homepage = "aller sur le site >";
